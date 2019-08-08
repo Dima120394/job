@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Проверка на оригинальность</title>
+		<link rel="stylesheet" type="text/css" href="../lib/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="./libs/style.css" />
+		<meta content="Content-type" charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="./libs/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./libs/socket_io/socket-io.js"></script>
+	</head>
+	<body>
+		<nav class="position-absolute navbar navbar-dark menu-popup">
+			<ul id="menu" class="navbar-nav bg-white mr-auto">
+				<li class="nav-item p-2 item-1">Проверить каждое предложение по отдельности</li>
+				<li class="nav-item p-2 item-2">Удалить</li>
+				<li class="nav-item p-2 item-3">Редактировать</li>
+			</ul>
+		</nav>
+		<script src="./libs/root.js"></script>
+		<div class="m-3 w-100">
+			<div class="container-fluid p-0 m-0 ml-0 box-log">
+				<div class="row container-fluid p-0 m-0 logs flex-row align-content-start"></div>
+				<div class="row logs_text col-12 p-0 m-0 align-content-start"></div>
+			</div>
+		<div class="container-fluid w-100 app">
+
+			<div class="row justify-content-center justify-content-md-center justify-content-xs-center align-items-center header">
+				<div class="col-auto order-1 col-sm-4 order-sm-1 col-md-4 order-md-1  col-xs-5"><div class=" col-auto btn auto_send p-1 m-1" title="Автоматическая отправка текста происходит в момент копирования текста в поле. Если при включённой функции просто написать текст в поле, работать не будет">auto send</div><div class="col-auto p-1 m-1 ml-3 btn translate">translate</div></div>
+				<div class="col-sm-12 order-3 order-sm-3 col-md-1 ml-2 order-md-2  col-xs-6 text-nowrap text-center count_zapros">Статус обработки: <span class="count">0/0</span></div>
+				<div class="row col-auto order-2 col-sm-3 order-sm-2 col-md-4 order-md-2 offset-md-2 col-xs-6 justify-content-md-right justify-content-sm-center justify-content-xs-center">
+					<div class="col-sm-12 col-md-5 col-md-offset-6 col-xs-12 text-nowrap"><span class="on_server">Сервер:</span><span class="status_server btn btn-danger">Offline</span></div>
+				</div>
+			</div>
+				<div class="row w-100 h-100">
+					<div class="row col-sm-12 col-md-5 mt-md-2 col-lg-5 col-xl-5 justify-content-md-center justify-content-sm-center text-center left_block w-100">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 h-100 send-text no-padding">
+							<textarea id="parse_textarea" tabindex="1" cols="70" maxlength="2000000" resize="none" wrap="hard"></textarea>
+						</div>
+						<div class="d-none col-sm-8 d-sm-none col-md-10 d-md-block col-lg-10 col-xl-8 parse_button" tabindex="2">Отправить</div>
+					</div>
+					<div class="row col-sm-12 col-md-7 mt-md-2 ml-md-0 p-md-0 col-lg-7 justify-content-sm-center no-padding pos-right-block">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 right_block">
+							<div class="row">
+								<!-- <div class="row col-12 m-0 p-0 result_text wait" data-id="1" data-time=""><div class="col-12 lh-auto px-3 p-1 text_parse" title="">Созданные контейнеры можно запускать, останавливать, проверять их статус и т д. При создании контейнера можно дополнительно передать докеру некоторые параметры. Например, попросить докер автоматически рестартовать контейнер, если тот упадёт.</div><div class="row align-items-center col-sm-12 m-0 p-0 info_tablo"><div class="col-auto h-100 m-0 p-0 w-75 col-sm-6 col-md-8 justify-content-between text-center date_inspect_text"><div class="row col-auto m-0 p-0 col-sm-8 col-md-11 pl-2 justify-content-left text-sm-center percent">Результат: <div class="text-center percent_text"><button class="result_show">показать</button></div></div><div class="row col-auto m-0 p-0 col-sm-12 col-md-12 pl-2 justify-content-left text-sm-top pb-1 pt-2 status status_scan">Статус:<div class="status_text">ожидание</div></div></div><div class="col-auto m-0 p-0 col-sm-6 h-100 w-25 col-md-4 justify-content-between text-right date_inspect" d-time=""><div class="col-auto p-0 col-sm-12 pr-2 col-md-12 text-right date_one"></div><div class="col-auto p-0 text-right col-sm-12 col-md-12 pt-2 pr-2 text-md-bottom date_two"></div></div></div></div> -->
+							</div>
+						</div>
+					</div>
+			</div>
+
+		</div>
+		</div>
+	</body>
+</html>

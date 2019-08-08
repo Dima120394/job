@@ -1,0 +1,14 @@
+IndexIgnore *
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [R=404,L]
+
+<ifmodule mod_expires.c>
+	<filesmatch ".(jpg|jpeg|gif|png|ico|css|js|gz)$">
+		ExpiresActive on
+		ExpiresDefault "access plus 1 month"
+	</filesmatch>
+</ifmodule>
